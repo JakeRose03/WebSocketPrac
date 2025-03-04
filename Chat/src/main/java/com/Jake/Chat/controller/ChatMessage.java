@@ -5,23 +5,20 @@ package com.Jake.Chat.controller;
 
 
 import lombok.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-import java.awt.*;
-
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 public class ChatMessage {
+    private static final Logger log = LoggerFactory.getLogger(ChatMessage.class);
     private String content;
     private String sender;
     private MessageType type;
 
-    public ChatMessage(String content, String sender, MessageType type) {
-        this.content = content;
-        this.sender = sender;
-        this.type = type;
-    }
-
-    public ChatMessage(){
-
-    }
     public String getSender() {
         return sender;
     }
@@ -45,4 +42,7 @@ public class ChatMessage {
     public void setType(MessageType type) {
         this.type = type;
     }
+
+
+
 }
