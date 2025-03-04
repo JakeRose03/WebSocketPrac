@@ -25,7 +25,7 @@ public class ChatController {
                                SimpMessageHeaderAccessor simpMessageHeaderAccessor
     )
     {
-        Objects.requireNonNull(simpMessageHeaderAccessor.getSessionAttributes()).put("username", chatMessage.getSender());\
+        Objects.requireNonNull(simpMessageHeaderAccessor.getSessionAttributes()).put("username", chatMessage.getSender());
         return chatMessage;
     }
 }
